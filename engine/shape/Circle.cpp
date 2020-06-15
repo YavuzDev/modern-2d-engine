@@ -15,8 +15,8 @@ void Circle::draw(float screenWidth, float screenHeight) {
     float y = this->getPoints()[0]->getConvertedY(screenHeight);
     glVertex2f(x, y);
     for (int i = 0; i <= 20; i++) {
-        glVertex2f(x + ((radius / screenWidth) * cos(static_cast<float>(i) * 2.0f * M_PI / 20)),
-                   y + ((radius / screenHeight) * sin(static_cast<float>(i) * 2.0f * M_PI / 20)));
+        glVertex2f(x + ((radius / screenWidth) * cos(static_cast<float>(i) * 2.0f * M_PI / 20.0f)),
+                   y + ((radius / screenHeight) * sin(static_cast<float>(i) * 2.0f * M_PI / 20.0f)));
     }
     glEnd();
 }

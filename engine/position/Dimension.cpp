@@ -12,7 +12,7 @@ int Dimension::getHeight() const {
     return height;
 }
 
-void Dimension::setWidth(int width){
+void Dimension::setWidth(int width) {
     Dimension::width = width;
 }
 

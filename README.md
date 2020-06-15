@@ -8,12 +8,6 @@ This example is used to move the rectangle when the cursor moves and to set the 
 
 ```c++
 
-
-#include <iostream>
-#include "ExampleGame.h"
-
-
-
 #include <iostream>
 #include "ExampleGame.h"
 

@@ -7,6 +7,7 @@ A 2d Game Engine built on OpenGL with GLFW.
 This example is used to move the rectangle when the cursor moves and to set the width and height to the cursor position.
 
 ```c++
+
 #include <iostream>
 #include "ExampleGame.h"
 
@@ -22,8 +23,8 @@ void ExampleGame::draw() {
     }
 }
 
-void ExampleGame::onMouseButton(GLFWwindow *window, int button, int action, int mods) {
-    if (action == 1) {
+void ExampleGame::onMouseButton(GLFWwindow *window, MouseEvents::MouseButtonEvent button, MouseEvents::MouseActionEvent action, int mods) {
+    if (action == MouseEvents::MouseActionEvent::pressed) {
         auto rectangle = std::dynamic_pointer_cast<Rectangle>(this->shapes[0]);
         rectangle->getDimension().setWidth(static_cast<int>(getCursorPoint().getX()));
         rectangle->getDimension().setHeight(static_cast<int>(getCursorPoint().getY()));

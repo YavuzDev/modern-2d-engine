@@ -17,7 +17,7 @@ void Circle::draw(float screenWidth, float screenHeight) {
 
     for (float angle = 0; angle <= 2 * M_PI; angle += 0.01) {
         glBegin(GL_POINTS);
-        glVertex2f(convertedX + std::cos(angle) * radius, convertedY + std::sin(angle) * radius);
+        glVertex2f(convertedX + std::cos(angle) * radius / 1000, convertedY + std::sin(angle) * radius / 1000);
     }
     glEnd();
 }

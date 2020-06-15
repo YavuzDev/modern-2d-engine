@@ -37,8 +37,8 @@ void ExampleGame::onMouseButton(GLFWwindow *window, MouseEvents::MouseButtonEven
 void ExampleGame::onMouseMove(GLFWwindow *window, double xPos, double yPos) {
     GameWindow::onMouseMove(window, xPos, yPos);
 
-    this->shapes[0]->getPoints()[0]->setX(static_cast<float>(xPos));
-    this->shapes[0]->getPoints()[0]->setY(static_cast<float>(getHeight() - yPos));
+    this->shapes[0]->getPoints()[0]->setX(getCursorPoint().getX());
+    this->shapes[0]->getPoints()[0]->setY(static_cast<float>(getHeight()) - getCursorPoint().getY());
 }
 
 

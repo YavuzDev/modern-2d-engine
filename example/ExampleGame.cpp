@@ -8,6 +8,7 @@
 
 ExampleGame::ExampleGame(int width, int height) : GameWindow(width, height) {
     auto rectangle = std::make_shared<Rectangle>(Point(50, 50), Dimension(50, 50));
+    rectangle->setColor(Color(100, 100, 100));
     this->shapes.push_back(rectangle);
 }
 
@@ -28,7 +29,7 @@ void ExampleGame::onMouseButton(GLFWwindow *window, MouseEvents::MouseButtonEven
 void ExampleGame::onMouseMove(GLFWwindow *window, double xPos, double yPos) {
     GameWindow::onMouseMove(window, xPos, yPos);
 
-    this->shapes[0]->getPoints()[0]->setX(static_cast<float>(xPos));
-    this->shapes[0]->getPoints()[0]->setY(static_cast<float>(getHeight() - yPos));
+    this->shapes[0]->getPoints()[0]->setX(static_cast<float>(xPos - 25));
+    this->shapes[0]->getPoints()[0]->setY(static_cast<float>(getHeight() - yPos - 25));
 }
 

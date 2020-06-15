@@ -16,6 +16,7 @@ void Rectangle::draw(float screenWidth, float screenHeight) {
     auto thirdPoint = Point(firstPoint->getX(), firstPoint->getY() + static_cast<float>(dimension.getHeight()));
 
     auto firstTriangle = std::make_shared<Triangle>(*firstPoint, secondPoint, thirdPoint);
+    firstTriangle->setColor(getColor());
     firstTriangle->draw(screenWidth, screenHeight);
 
     auto fourthPoint = Point(firstPoint->getX() + static_cast<float>(dimension.getWidth()),
@@ -24,6 +25,7 @@ void Rectangle::draw(float screenWidth, float screenHeight) {
     auto sixthPoint = Point(firstPoint->getX(), firstPoint->getY() + static_cast<float>(dimension.getHeight()));
 
     auto secondTriangle = std::make_shared<Triangle>(fourthPoint, fifthPoint, sixthPoint);
+    secondTriangle->setColor(getColor());
     secondTriangle->draw(screenWidth, screenHeight);
 }
 

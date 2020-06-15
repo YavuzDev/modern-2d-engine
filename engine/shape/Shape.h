@@ -7,6 +7,7 @@
 
 
 #include "../position/Point.h"
+#include "Color.h"
 #include <vector>
 
 class Shape {
@@ -14,6 +15,7 @@ class Shape {
 private:
     std::vector<std::shared_ptr<Point>> points;
 
+    Color color = Color(255, 255, 255);
 public:
     virtual int size() = 0;
 
@@ -21,6 +23,14 @@ public:
 
     std::vector<std::shared_ptr<Point>> &getPoints() {
         return points;
+    }
+
+    const Color &getColor() const {
+        return color;
+    }
+
+    void setColor(const Color &color) {
+        Shape::color = color;
     }
 };
 

@@ -15,6 +15,7 @@ This example is used to move the rectangle when the cursor moves and to set the 
 
 ExampleGame::ExampleGame(int width, int height) : GameWindow(width, height) {
     auto rectangle = std::make_shared<Rectangle>(Point(50, 50), Dimension(50, 50));
+    rectangle->setColor(Color(100, 100, 100));
     this->shapes.push_back(rectangle);
 }
 

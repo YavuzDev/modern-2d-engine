@@ -11,6 +11,7 @@ int Triangle::size() {
 
 void Triangle::draw(float screenWidth, float screenHeight) {
     glBegin(GL_TRIANGLES);
+    glColor3ub(getColor().getRed(), getColor().getGreen(), getColor().getBlue());
     for (int i = 0; i < 3; i++) {
         glVertex2f(this->getPoints()[i]->getConvertedX(screenWidth), this->getPoints()[i]->getConvertedY(screenHeight));
     }

@@ -11,13 +11,12 @@ void Circle::draw(float screenWidth, float screenHeight) {
     glBegin(GL_TRIANGLE_FAN);
     glColor3ub(getColor().getRed(), getColor().getGreen(), getColor().getBlue());
 
-    float convertedX = this->getPoints()[0]->getConvertedX(screenWidth);
-    float convertedY = this->getPoints()[0]->getConvertedY(screenHeight);
-    glVertex2f(convertedX, convertedY);
-
-    for (float angle = 0; angle <= 2 * M_PI; angle += 0.01) {
-        glBegin(GL_POINTS);
-        glVertex2f(convertedX + std::cos(angle) * radius / 1000, convertedY + std::sin(angle) * radius / 1000);
+    float x = this->getPoints()[0]->getConvertedX(screenWidth);
+    float y = this->getPoints()[0]->getConvertedY(screenHeight);
+    glVertex2f(x, y);
+    for (int i = 0; i <= 20; i++) {
+        glVertex2f(x + ((radius / screenWidth) * cos(i * 2.0f * M_PI / 20)),
+                   y + ((radius / screenHeight) * sin(i * 2.0f * M_PI / 20)));
     }
     glEnd();
 }

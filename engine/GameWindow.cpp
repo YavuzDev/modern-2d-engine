@@ -32,6 +32,9 @@ void GameWindow::start() {
 
     glfwMakeContextCurrent(window);
 
+    glViewport(0, 0, width, height);
+    glMatrixMode(GL_PROJECTION);
+    glMatrixMode(GL_MODELVIEW);
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
 

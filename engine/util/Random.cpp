@@ -5,7 +5,10 @@
 #include "Random.h"
 
 int Random::random(int min, int max) {
-    std::mt19937 gen(rd());
     std::uniform_int_distribution<> range(min, max);
     return range(gen);
+}
+
+Random::Random() {
+    this->gen = std::mt19937(rd());
 }

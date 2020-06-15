@@ -10,6 +10,10 @@ ExampleGame::ExampleGame(int width, int height) : GameWindow(width, height) {
     auto rectangle = std::make_shared<Rectangle>(Point(50, 50), Dimension(50, 50));
     rectangle->setColor(Color(100, 100, 100));
     this->shapes.push_back(rectangle);
+
+    auto line = std::make_shared<Line>(Point(0, 0), Point(static_cast<float>(width), static_cast<float>(height)));
+    line->setColor(Color(200, 200, 200));
+    this->shapes.push_back(line);
 }
 
 void ExampleGame::draw() {

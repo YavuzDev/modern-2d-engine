@@ -24,6 +24,7 @@ void DrawingGame::onMouseMove(GLFWwindow *window, double xPos, double yPos) {
     if (this->drawing) {
         auto circle = std::make_shared<Circle>(
                 Point(getCursorPoint().getX(), static_cast<float>(getHeight()) - getCursorPoint().getY()), 80);
+        circle->setColor(Color(random.random(0, 255), random.random(0, 255), random.random(0, 255)));
         this->shapes.push_back(circle);
     }
 

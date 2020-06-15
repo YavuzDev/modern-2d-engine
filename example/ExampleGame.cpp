@@ -18,10 +18,10 @@ void ExampleGame::draw() {
 }
 
 void ExampleGame::onMouseButton(GLFWwindow *window, MouseEvents::MouseButtonEvent button, MouseEvents::MouseActionEvent action, int mods) {
-    if (action == MouseEvents::MouseActionEvent::pressed) {
+    if (action == MouseEvents::pressed) {
         auto rectangle = std::dynamic_pointer_cast<Rectangle>(this->shapes[0]);
-        rectangle->getDimension().setWidth(static_cast<int>(getCursorPoint().getX()));
-        rectangle->getDimension().setHeight(static_cast<int>(getCursorPoint().getY()));
+        rectangle->getDimension().incrementWidth(button == MouseEvents::leftClick ? 50 : -50);
+        rectangle->getDimension().incrementHeight(button == MouseEvents::leftClick ? 50 : -50);
     }
 }
 

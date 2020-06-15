@@ -7,10 +7,13 @@
 
 
 #include "../engine/GameWindow.h"
+#include "../engine/util/Random.h"
 
 class ExampleGame : public GameWindow {
 
 private:
+    Random random;
+
     std::vector<std::shared_ptr<Shape>> shapes;
 
 protected:

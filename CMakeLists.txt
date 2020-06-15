@@ -11,7 +11,7 @@ add_subdirectory(libraries/glad)
 
 find_package(OpenGL REQUIRED)
 
-add_executable(kiraged2dengine main.cpp engine/GameWindow.cpp engine/GameWindow.h example/ExampleGame.cpp example/ExampleGame.h engine/shape/Shape.h engine/shape/Triangle.cpp engine/shape/Triangle.h engine/position/Point.cpp engine/position/Point.h engine/shape/Rectangle.cpp engine/shape/Rectangle.h engine/position/Dimension.cpp engine/position/Dimension.h engine/event/MouseEvents.h engine/shape/Color.h)
+add_executable(kiraged2dengine main.cpp engine/GameWindow.cpp engine/GameWindow.h example/ExampleGame.cpp example/ExampleGame.h engine/shape/Shape.h engine/shape/Triangle.cpp engine/shape/Triangle.h engine/position/Point.cpp engine/position/Point.h engine/shape/Rectangle.cpp engine/shape/Rectangle.h engine/position/Dimension.cpp engine/position/Dimension.h engine/event/MouseEvents.h engine/shape/Color.h engine/util/Random.cpp engine/util/Random.h)
 target_link_libraries(kiraged2dengine glfw)
 target_link_libraries(kiraged2dengine OpenGL::GL)
 target_link_libraries(kiraged2dengine glad)

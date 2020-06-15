@@ -16,6 +16,7 @@ private:
     std::vector<std::shared_ptr<Point>> points;
 
     Color color = Color(255, 255, 255);
+
 public:
     virtual int size() = 0;
 

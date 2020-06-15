@@ -30,6 +30,7 @@ void ExampleGame::onMouseButton(GLFWwindow *window, MouseEvents::MouseButtonEven
         auto rectangle = std::dynamic_pointer_cast<Rectangle>(this->shapes[0]);
         rectangle->getDimension().incrementWidth(button == MouseEvents::leftClick ? 50 : -50);
         rectangle->getDimension().incrementHeight(button == MouseEvents::leftClick ? 50 : -50);
+        rectangle->setColor(Color(random.random(0, 255), random.random(0, 255), random.random(0, 255)));    
     }
 }
 

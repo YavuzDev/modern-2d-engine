@@ -6,7 +6,7 @@
 
 int Random::random(int min, int max) {
     std::uniform_int_distribution<> range(min, max);
-    return range(gen);
+    return range(this->gen);
 }
 
 Random::Random() {

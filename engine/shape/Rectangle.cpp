@@ -6,9 +6,6 @@
 #include "Rectangle.h"
 #include "Triangle.h"
 
-int Rectangle::size() {
-    return 12 * sizeof(float);
-}
 
 void Rectangle::draw(float screenWidth, float screenHeight) {
     auto firstPoint = this->getPoints()[0];

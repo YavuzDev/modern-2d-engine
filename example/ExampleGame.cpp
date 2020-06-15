@@ -14,6 +14,9 @@ ExampleGame::ExampleGame(int width, int height) : GameWindow(width, height) {
     auto line = std::make_shared<Line>(Point(0, 0), Point(static_cast<float>(width), static_cast<float>(height)));
     line->setColor(Color(200, 200, 200));
     this->shapes.push_back(line);
+
+    auto circle = std::make_shared<Circle>(Point(static_cast<float>(width) / 2, static_cast<float>(height) / 2), 0.2);
+    this->shapes.push_back(circle);
 }
 
 void ExampleGame::draw() {

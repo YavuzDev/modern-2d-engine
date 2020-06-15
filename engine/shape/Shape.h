@@ -18,8 +18,6 @@ private:
     Color color = Color(255, 255, 255);
 
 public:
-    virtual int size() = 0;
-
     virtual void draw(float screenWidth, float screenHeight) = 0;
 
     std::vector<std::shared_ptr<Point>> &getPoints() {

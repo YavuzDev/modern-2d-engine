@@ -15,8 +15,6 @@ private:
     Dimension dimension;
 
 public:
-    int size() override;
-
     void draw(float screenWidth, float screenHeight) override;
 
     Rectangle(Point point, Dimension dimension);

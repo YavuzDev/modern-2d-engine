@@ -11,8 +11,6 @@
 class Line : public Shape {
 
 public:
-    int size() override;
-
     void draw(float screenWidth, float screenHeight) override;
 
     Line(Point firstPoint, Point secondPoint);

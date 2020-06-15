@@ -5,9 +5,6 @@
 #include "Triangle.h"
 #include <GLFW\glfw3.h>
 
-int Triangle::size() {
-    return 6 * sizeof(float);
-}
 
 void Triangle::draw(float screenWidth, float screenHeight) {
     glBegin(GL_TRIANGLES);

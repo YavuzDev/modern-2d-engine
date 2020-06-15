@@ -12,6 +12,7 @@
 #include "shape/Triangle.h"
 #include "shape/Rectangle.h"
 #include "shape/Line.h"
+#include "shape/Circle.h"
 #include "position/Dimension.h"
 #include "event/MouseEvents.h"
 #include <GLFW\glfw3.h>

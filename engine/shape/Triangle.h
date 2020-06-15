@@ -13,8 +13,6 @@
 class Triangle : public Shape {
 
 public:
-    int size() override;
-
     void draw(float screenWidth, float screenHeight) override;
 
     Triangle(Point firstPoint, Point secondPoint, Point thirdPoint);

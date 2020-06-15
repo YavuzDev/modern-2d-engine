@@ -6,6 +6,7 @@
 #include <GLFW\glfw3.h>
 #include <stdexcept>
 
+
 void GameWindow::start() {
     if (!glfwInit()) {
         throw std::runtime_error("Unable to initialize glfw");
@@ -17,7 +18,10 @@ void GameWindow::start() {
     glfwSetWindowUserPointer(window, this);
 
     auto mouseButtonCallback = [](GLFWwindow *w, int button, int action, int mods) {
-        static_cast<GameWindow *>(glfwGetWindowUserPointer(w))->onMouseButton(w, button, action, mods);
+        static_cast<GameWindow *>(glfwGetWindowUserPointer(w))->onMouseButton(w,
+                                                                              static_cast<MouseEvents::MouseButtonEvent>(button),
+                                                                              static_cast<MouseEvents::MouseActionEvent>(action),
+                                                                              mods);
     };
     glfwSetMouseButtonCallback(window, mouseButtonCallback);
 

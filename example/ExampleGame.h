@@ -16,7 +16,8 @@ private:
 protected:
     void draw() override;
 
-    void onMouseButton(GLFWwindow *window, int button, int action, int mods) override;
+    void onMouseButton(GLFWwindow *window, MouseEvents::MouseButtonEvent button, MouseEvents::MouseActionEvent action,
+                       int mods) override;
 
     void onMouseMove(GLFWwindow *window, double xPos, double yPos) override;
 

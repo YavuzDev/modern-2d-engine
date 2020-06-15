@@ -12,6 +12,7 @@
 #include "shape/Triangle.h"
 #include "shape/Rectangle.h"
 #include "position/Dimension.h"
+#include "event/MouseEvents.h"
 #include <GLFW\glfw3.h>
 
 class GameWindow {
@@ -26,7 +27,9 @@ private:
 protected:
     virtual void draw() = 0;
 
-    virtual void onMouseButton(GLFWwindow *window, int button, int action, int mods) = 0;
+    virtual void
+    onMouseButton(GLFWwindow *window, MouseEvents::MouseButtonEvent button, MouseEvents::MouseActionEvent action,
+                  int mods) = 0;
 
     virtual void onMouseMove(GLFWwindow *window, double xPos, double yPos);
 
@@ -42,7 +45,6 @@ public:
     GameWindow(int width, int height);
 
     void start();
-
 };
 
 

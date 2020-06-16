@@ -4,7 +4,10 @@
 
 #include <algorithm>
 #include <cmath>
+#include <iostream>
 #include "DrawingGame.h"
+
+DrawingGame::DrawingGame(int width, int height) : GameWindow(width, height) {}
 
 void DrawingGame::draw() {
     for (auto &shape : this->shapes) {
@@ -42,4 +45,8 @@ void DrawingGame::onMouseMove(GLFWwindow *window, double xPos, double yPos) {
     }
 }
 
-DrawingGame::DrawingGame(int width, int height) : GameWindow(width, height) {}
+void DrawingGame::onKeyboardButton(GLFWwindow *window, char key, int scancode, KeyboardEvents::KeyboardAction action, int mods) {
+    if (action == KeyboardEvents::pressed && key == 'R') {
+        this->shapes.clear();
+    }
+}

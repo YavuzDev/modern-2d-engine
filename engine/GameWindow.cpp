@@ -18,10 +18,11 @@ void GameWindow::start() {
     glfwSetWindowUserPointer(window, this);
 
     auto mouseButtonCallback = [](GLFWwindow *w, int button, int action, int mods) {
-        static_cast<GameWindow *>(glfwGetWindowUserPointer(w))->onMouseButton(w,
-                                                                              static_cast<MouseEvents::MouseButtonEvent>(button),
-                                                                              static_cast<MouseEvents::MouseActionEvent>(action),
-                                                                              mods);
+        static_cast<GameWindow *>(glfwGetWindowUserPointer(w))->
+                onMouseButton(w,
+                              static_cast<MouseEvents::MouseButtonEvent>(button),
+                              static_cast<MouseEvents::MouseActionEvent>(action),
+                              mods);
     };
     glfwSetMouseButtonCallback(window, mouseButtonCallback);
 
@@ -29,6 +30,14 @@ void GameWindow::start() {
         static_cast<GameWindow *>(glfwGetWindowUserPointer(w))->onMouseMove(w, xPos, yPos);
     };
     glfwSetCursorPosCallback(window, mouseMovementCallback);
+
+    auto keyboardButtonCallback = [](GLFWwindow *w, int key, int scancode, int action, int mods) {
+        static_cast<GameWindow *>(glfwGetWindowUserPointer(w))->
+                onKeyboardButton(w, static_cast<char>(key), scancode,
+                                 static_cast<KeyboardEvents::KeyboardAction>(action),
+                                 mods);
+    };
+    glfwSetKeyCallback(window, keyboardButtonCallback);
 
     glfwMakeContextCurrent(window);
 

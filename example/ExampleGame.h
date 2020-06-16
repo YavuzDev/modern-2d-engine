@@ -24,6 +24,8 @@ protected:
 
     void onMouseMove(GLFWwindow *window, double xPos, double yPos) override;
 
+    void onKeyboardButton(GLFWwindow *window, char key, int scancode, KeyboardEvents::KeyboardAction action, int mods) override;
+
 public:
     ExampleGame(int width, int height);
 

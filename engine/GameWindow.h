@@ -15,6 +15,7 @@
 #include "shape/Circle.h"
 #include "position/Dimension.h"
 #include "event/MouseEvents.h"
+#include "event/KeyboardEvents.h"
 #include <GLFW\glfw3.h>
 
 class GameWindow {
@@ -34,6 +35,8 @@ protected:
                   int mods) = 0;
 
     virtual void onMouseMove(GLFWwindow *window, double xPos, double yPos);
+
+    virtual void onKeyboardButton(GLFWwindow *window, char key, int scancode, KeyboardEvents::KeyboardAction action, int mods) = 0;
 
     Point &getCursorPoint();
 

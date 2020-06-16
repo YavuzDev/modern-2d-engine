@@ -15,7 +15,7 @@ public:
 
     enum MouseButtonEvent {
         leftClick = 0,
-        rightClick = 1,
+        rightClick = 1
     };
 };
 

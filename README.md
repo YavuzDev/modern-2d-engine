@@ -48,6 +48,10 @@ void ExampleGame::onMouseMove(GLFWwindow *window, double xPos, double yPos) {
     this->shapes[0]->getPoints()[0]->setY(static_cast<float>(getHeight()) - getCursorPoint().getY());
 }
 
+void ExampleGame::onKeyboardButton(GLFWwindow *window, char key, int scancode, KeyboardEvents::KeyboardAction action, int mods) {
+
+}
+
 ```
 
 To start the actual window:

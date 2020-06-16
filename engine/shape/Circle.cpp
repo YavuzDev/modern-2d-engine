@@ -5,7 +5,6 @@
 #include <cmath>
 #include <memory>
 #include "Circle.h"
-#include <GLFW\glfw3.h>
 
 void Circle::draw(float screenWidth, float screenHeight) {
     glBegin(GL_TRIANGLE_FAN);

@@ -3,8 +3,6 @@
 //
 
 #include "Triangle.h"
-#include <GLFW\glfw3.h>
-
 
 void Triangle::draw(float screenWidth, float screenHeight) {
     glBegin(GL_TRIANGLES);

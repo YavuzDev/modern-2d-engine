@@ -9,6 +9,7 @@
 #include "../position/Point.h"
 #include "Color.h"
 #include <vector>
+#include <GLFW\glfw3.h>
 
 class Shape {
 

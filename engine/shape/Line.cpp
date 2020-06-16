@@ -4,8 +4,6 @@
 
 #include <memory>
 #include "Line.h"
-#include <GLFW\glfw3.h>
-
 
 void Line::draw(float screenWidth, float screenHeight) {
     glBegin(GL_LINES);

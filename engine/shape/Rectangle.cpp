@@ -6,7 +6,6 @@
 #include "Rectangle.h"
 #include "Triangle.h"
 
-
 void Rectangle::draw(float screenWidth, float screenHeight) {
     auto firstPoint = this->getPoints()[0];
     auto secondPoint = Point(firstPoint->getX() + static_cast<float>(dimension.getWidth()), firstPoint->getY());

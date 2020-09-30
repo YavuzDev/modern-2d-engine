@@ -1,4 +1,4 @@
-# Kiraged Engine
+# Modern Engine
 
 A 2d Game Engine built on OpenGL with GLFW.
 
